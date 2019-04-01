@@ -20,22 +20,22 @@ function rootReducer(state = initialState, action) {
 const store = Redux.createStore(rootReducer);
 
 $(document).ready(function() {
-  let currentState = store.getState(); // {count: 0}
-  $("#counter").text(currentState.count); // h1 text to be 0
+  let currentState = store.getState(); 
+  $("#counter").text(currentState.count); 
 
   $("#increment").on("click", function() {
     store.dispatch({
       type: "INCREMENT"
     });
-    let currentState = store.getState(); // {count: 1}
-    $("#counter").text(currentState.count); // h1 text to be 1
+    let currentState = store.getState(); 
+    $("#counter").text(currentState.count); 
   });
 
   $("#decrement").on("click", function() {
     store.dispatch({
       type: "DECREMENT"
     });
-    let currentState = store.getState(); // {count: 0}
-    $("#counter").text(currentState.count); // h1 text to be 0
+    let currentState = store.getState(); 
+    $("#counter").text(currentState.count); 
   });
 });
